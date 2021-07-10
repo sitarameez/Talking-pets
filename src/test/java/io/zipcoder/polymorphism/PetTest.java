@@ -2,6 +2,7 @@ package io.zipcoder.polymorphism;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
+import org.junit.Test;
 
 public class PetTest extends TestCase {
 
@@ -13,15 +14,7 @@ public class PetTest extends TestCase {
         Assert.assertEquals(expected,dog.getName());
 
     }
-//    @Test
-//    public void testRemoveCat() {
-//        CatHouse catHouse = new CatHouse();
-//        Integer id = 1;
-//        Cat cat =new Cat("cora",null,id);
-//        catHouse.add(cat);
-//        catHouse.remove(cat);
-//        // catHouse.remove(id);
-//        Assert.assertEquals(null,catHouse.getCatById(id));
+
     public void testRemovePet() {
         Pet pet =new Pet();
         Integer expected = 2;
@@ -32,9 +25,19 @@ public class PetTest extends TestCase {
         pet.addPet(dino);
         pet.addPet(cat);
         pet.removePet(dog);
-        Assert.assertEquals(expected,pet.count());
+        Assert.assertEquals(expected,pet.numberOfPets());
     }
 
     public void testSpeak() {
+        Pet pet =new Pet(null,null,null);
+        pet.speak();
+        Assert.assertEquals("I'm not talking until you tell me what kinda pet i'm",pet.speak());
     }
+    @Test
+    public void testInheritance() {
+        Pet pet = new Dog(null,null,null);
+        Assert.assertTrue(pet instanceof Pet);
+    }
+
+
 }

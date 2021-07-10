@@ -20,7 +20,7 @@ public class Pet {
     public Integer getAge() {
         return age;
     }
-    public Integer count() {
+    public Integer numberOfPets() {
         return pets.size();
     }
 
@@ -44,7 +44,7 @@ public class Pet {
     }
 
     public String speak(){
-        return "Brrr!";
+        return "I'm not talking until you tell me what kinda pet i'm";
     }
 
     public String getName() {
