@@ -13,6 +13,7 @@ public class Pet {
         this.age=age;
         this.breed=breed;
     }
+    public Pet(){}
 
     public Integer getAge() {
         return age;
@@ -39,5 +40,13 @@ public class Pet {
 
     public String speak(){
         return "Brrr!";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
