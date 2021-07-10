@@ -6,17 +6,22 @@ public class Pet {
     String name;
     Integer age;
     String breed;
+    Integer id;
     ArrayList<Pet> pets= new ArrayList<Pet>();
 
     public Pet(String name,Integer age,String breed){
         this.name=name;
         this.age=age;
         this.breed=breed;
+        //this.id =id;
     }
     public Pet(){}
 
     public Integer getAge() {
         return age;
+    }
+    public Integer count() {
+        return pets.size();
     }
 
     public void setAge(Integer age) {
